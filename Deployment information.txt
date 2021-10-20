@@ -1,0 +1,83 @@
+ Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 29999972 (0x1c9c364)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0xf36292b23b9098b86075a22c085d9b0d05d468d44849596dc4a3adfd19b91cf9
+   > Blocks: 1            Seconds: 17
+   > contract address:    0x7bAFA5e7bb7064Df6AaE0d3553bb5C785A300c6b
+   > block number:        9450383
+   > block timestamp:     1634015041
+   > account:             0x39602393131d0732C6ABF4dcd90390dE0DCe3c03
+   > balance:             29.389352537111596235
+   > gas used:            245600 (0x3bf60)
+   > gas price:           1.000000013 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0002456000031928 ETH
+
+   Pausing for 2 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 9450384)
+   > confirmation number: 2 (block: 9450385)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.0002456000031928 ETH
+
+
+2_NFT721.js
+===========
+
+   Replacing 'NFT721'
+   ------------------
+   > transaction hash:    0x1a8ba0d0903bdeac296c0443cc931f330c43b6cdcda6c20ac78ee5cf8163aa6a
+   > Blocks: 1            Seconds: 9
+   > contract address:    0xf8FFdB119f4A5bcaF151a09A1e47e7553fc3d7A2
+   > block number:        9450387
+   > block timestamp:     1634015101
+   > account:             0x39602393131d0732C6ABF4dcd90390dE0DCe3c03
+   > balance:             29.386479522077120055
+   > gas used:            2827102 (0x2b235e)
+   > gas price:           1.000000012 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002827102033925224 ETH
+
+   Pausing for 2 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 9450388)
+   > confirmation number: 2 (block: 9450389)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:     0.002827102033925224 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.003072702037118024 ETH
+
+
+- Blocks: 0            Seconds: 0
+- Saving migration to chain.
+- Blocks: 0            Seconds: 0
+- Saving migration to chain.
+
+truffle(rinkeby)> let instance=await NFT721.deployed();
+undefined
+truffle(rinkeby)> instance.lasttokenId()
+BN { negative: 0, words: [ 0, <1 empty item> ], length: 1, red: null }
+truffle(rinkeby)> instance.lasttokenId();
+BN { negative: 0, words: [ 0, <1 empty item> ], length: 1, red: null }
+truffle(rinkeby)> instance.baseURI();
+'https://floydnft.com/token/'
+truffle(rinkeby)>
