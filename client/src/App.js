@@ -24,8 +24,8 @@ const App = () => {
       const accounts = await Web3.eth.getAccounts();
       setaccount(accounts[0]);
       const balance = await Web3.eth.getBalance(accounts[0]);
-      // console.log(balance);
-      setBalance(balance);
+      const balance2=Web3.utils.fromWei(balance,'ether');
+      setBalance(balance2);
        const networkId = await Web3.eth.net.getId();
        if(networkId===1){
         setnetworkName("Mainnet")
@@ -252,7 +252,7 @@ const restart=()=>{
   <nav className="navbar">
   <div className="upper">
       <h4>{networkName} Connected</h4>
-      <h4>Balance: {Balance} wei</h4>
+      <h4>Balance: {Balance}</h4>
       <button className="btn" onClick={restart}><h4>Connect to Wallet</h4></button></div>
   <div className="lower">Account:{account}</div>
   </nav>
@@ -275,7 +275,7 @@ const restart=()=>{
   <input className="input" placeholder="Owner address" type="string" onChange={owneraddress}></input>
   <input className="input" placeholder="Operater address" type="string" onChange={toaddress}></input>
       <button className="btn2" onClick={()=>isApprovedForAll()}>Is approved for all</button>
-      <h1>Writing data</h1>
+      {/* <h1>Writing data</h1> */}
   <input className="input" placeholder="Operator address" type="string" onChange={toaddress}></input>
   <input className="input" placeholder="Token id" type="number" onChange={tokenURI}></input>
       <button className="btn2" onClick={()=>Approve()}>Approve Token</button>

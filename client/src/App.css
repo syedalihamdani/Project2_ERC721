@@ -42,21 +42,23 @@ padding:0;
  }
  .section{
    /* border: 3px solid green ; */
-   width:max(30%,280px);
+   width:min(100%,370px);
  }
  .screen{
-   /* border: 2px solid red; */
-   width: max(30%,280px);
+   border: 2px solid rgb(182, 173, 173);
+   width: min(100%,370px);
    height:50px ;
    text-align: center;
-   font-size: 43px;
+   /* font-size: 43px; */
+   border-radius: 23px;
  }
  .input{
-  width: max(30%,280px);
+  width: 100%;
   height:30px ;
   text-align: center;
   font-size: 23px;
-  border: none;
+  border: 2px solid rgb(182, 173, 173);
+  margin: 8px 0px;
  }
  .btn2{
    width: 100%;
